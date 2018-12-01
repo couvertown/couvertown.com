@@ -1,0 +1,71 @@
+/* fonts n' typographic shit */
+
+@font-face {
+  font-family: 'AXIS Extra Bold';
+  src: url('axis.woff2') format('woff2'),
+      url('axis.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Open+Sans:400,700');
+
+/* text styles */
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 800;
+  font-family: "Axis", sans-serif;
+}
+
+.page-title {
+  display: block;
+  font-size: 36pt;
+}
+
+div.page-title {
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #000000;
+}
+
+.page-subtitle {
+  display: block;
+}
+
+p {
+  display: block;
+  font-family: "Lora", serif;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.blurb {
+  padding-top: 20px;
+}
+
+.blurb > p {
+  font-size: 16pt;
+}
+
+p a {
+    color: lightgray;
+    text-decoration-style: dotted;
+}
+
+p a:hover{
+    color: darkgray;
+    text-decoration-style: solid;
+}
+
+/* a minimalist container class */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footer {
+  font-family: "Lato", sans-serif;
+}
