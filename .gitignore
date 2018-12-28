@@ -83,3 +83,4 @@ server/public/bg.jpg
 server/public/logo.png
 server/public/favicon.ico
 server/public/axis.woff*
+secrets/
