@@ -74,3 +74,12 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# OS X garbage
+.DS_Store
+
+# proprietary files
+server/public/bg.jpg
+server/public/logo.png
+server/public/favicon.ico
+server/public/axis.woff*

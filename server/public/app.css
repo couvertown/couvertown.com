@@ -10,26 +10,54 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Open+Sans:400,700');
 
-/* text styles */
-
 h1,h2,h3,h4,h5,h6 {
   font-weight: 800;
-  font-family: "Axis", sans-serif;
+  font-family: "AXIS Extra Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 .page-title {
-  display: block;
-  font-size: 36pt;
+  margin: auto;
+  text-align: center;
 }
 
-div.page-title {
-  border-style: none none solid none;
-  border-width: 1px;
-  border-color: #000000;
+.page-title h1{
+  font-size: 64pt;
+  margin: 0px;
 }
 
-.page-subtitle {
-  display: block;
+@media screen and (max-width: 1500px) {
+  .page-title h1 {
+    font-size: 36pt;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-title h1 {
+    visibility: hidden;
+  }
+}
+
+.cover {
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 900px;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.logo {
+  margin: auto;
+  height: 250px;
 }
 
 p {
@@ -47,17 +75,16 @@ p {
   font-size: 16pt;
 }
 
-p a {
-    color: lightgray;
+a {
+    color: #3f3f3f;
     text-decoration-style: dotted;
 }
 
-p a:hover{
-    color: darkgray;
+a:hover{
+    color: #a2a2a2;
     text-decoration-style: solid;
 }
 
-/* a minimalist container class */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -66,6 +93,12 @@ p a:hover{
   padding-right: 10px;
 }
 
+div.footer {
+  margin-top: 3em;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #3f3f3f;
+}
 .footer {
   font-family: "Lato", sans-serif;
 }
