@@ -14,7 +14,7 @@ app.set("view engine", "hbs");
 app.set("x-powered-by", false);
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {description: "Couvertown is a community of designers and creators who, through our work, seek to create beautiful things and weave a common thread through the social fabric of Vancouver."});
 });
 
 app.listen(3000);
