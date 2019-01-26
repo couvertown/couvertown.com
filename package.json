@@ -12,6 +12,7 @@
     "forever": "^0.15.3",
     "hbs": "^4.0.1",
     "hbs-utils": "^0.0.4",
+    "mongoose": "^5.4.6",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
