@@ -1,3 +1,4 @@
+const bodyparser = require("body-parser");
 const express = require("express");
 const hbs = require("hbs");
 const hbsutils = require("hbs-utils")(hbs);
@@ -15,6 +16,7 @@ hbs.registerPartials(viewsDirectory + "/partials");
 app.use(morgan("dev"));
 app.use("/public", express.static(__dirname + "/client/public"));
 app.set("views", viewsDirectory);
+app.use(bodyparser.json());
 app.set("view engine", "hbs");
 app.set("x-powered-by", false);
 
@@ -26,8 +28,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/products", ProductsController.list);
+app.post("/api/products/create", ProductsController.create);
 
-// TODO: need to decouple production from local database
+// TODO: need to decouple production from local database in development mode
 mongoose.connect("mongodb://localhost/testdb").then(() => {
   console.log("connected to database");
   app.listen(port, () => {
