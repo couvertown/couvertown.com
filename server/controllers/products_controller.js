@@ -43,6 +43,7 @@ const ProductsController = {
       res.sendStatus(400);
       return;
     }
+
     Product.findByIdAndDelete(req.body.id).then(
       () => {
         res.sendStatus(200);
