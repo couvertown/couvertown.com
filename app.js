@@ -9,13 +9,17 @@ const ProductsController = require("./server/controllers/products_controller");
 const port = 3000;
 const app = express();
 
-const viewsDirectory = __dirname + "/client/views";
+// TODO: only whitelist localhost
+const localCors = function(req, res, next) {
+  res.set("Access-Control-Allow-Origin", "*");
+  next();
+};
 
-hbs.registerPartials(viewsDirectory + "/partials");
 // middleware
 app.use(morgan("dev"));
+app.use(localCors);
+
 app.use("/public", express.static(__dirname + "/client/public"));
-app.set("views", viewsDirectory);
 app.use(bodyparser.json());
 app.set("view engine", "hbs");
 app.set("x-powered-by", false);

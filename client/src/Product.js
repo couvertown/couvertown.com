@@ -3,12 +3,13 @@ import React, { Component } from "react";
 class Product extends Component {
   render() {
     return (
-      <div>
+      <div class="productDescription">
         <h2>
-          {this.props.name}
-          <small>CAD${this.props.price}</small>
+          {this.props.name}&nbsp;
+          <small>${this.props.price} CAD</small>
         </h2>
         <p>{this.props.description}</p>
+        <a href="#">add to cart</a>
       </div>
     );
   }
