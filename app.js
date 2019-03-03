@@ -3,6 +3,7 @@ const hbs = require("hbs");
 const hbsutils = require("hbs-utils")(hbs);
 const morgan = require("morgan");
 
+const port = 3000;
 const app = express();
 
 const viewsDirectory = __dirname + "/client/views";
@@ -22,4 +23,13 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3000);
+app.listen(port, () => {
+    console.log('Hey there cool cats, this is\n' +
+                '  _____                       __                \n' +
+                ' / ___/__  __ ___  _____ ____/ /____ _    _____ \n' +
+                '/ /__/ _ \\/ // / |/ / -_) __/ __/ _ \\ |/|/ / _ \\\n' +
+                '\\___/\\___/\\_,_/|___/\\__/_/  \\__/\\___/__,__/_//_/\n' +
+                '\n' +
+                'Now serving up some smooth content on port ' + port + '.');
+
+});
