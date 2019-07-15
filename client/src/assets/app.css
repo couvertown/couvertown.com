@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'AXIS Extra Bold';
+  src: url('axis.woff2') format('woff2'),
+      url('axis.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Open+Sans:400,700');
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css");
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/brands.css");
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 800;
+  font-family: "AXIS Extra Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page-title {
+  margin: auto;
+  text-align: center;
+}
+
+.page-title h1{
+  font-size: 64pt;
+  color: #ffffff;
+  margin: 0px;
+}
+
+@media screen and (max-width: 1500px) {
+  .page-title h1 {
+    font-size: 36pt;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-title h1 {
+    visibility: hidden;
+  }
+}
+
+.cover {
+  background: url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 900px;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.logo {
+  margin: auto;
+  height: 250px;
+}
+
+p {
+  display: block;
+  font-family: "Lora", serif;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.blurb {
+  padding-top: 20px;
+}
+
+.blurb > p {
+  font-size: 16pt;
+}
+
+a {
+    color: #3f3f3f;
+    text-decoration-style: dotted;
+}
+
+a:hover{
+    color: #a2a2a2;
+    text-decoration-style: solid;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.footer {
+  margin: 3em auto auto auto;
+  padding: 1em 0 1em 0;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #3f3f3f;
+}
+
+.footer {
+  font-family: "AXIS Extra Bold", sans-serif;
+}
+
+.copyright {
+  font-size: 12pt;
+  color: #3f3f3f;
+}
+
+ul.footer-nav {
+  list-style: none;
+  padding-left: 0px;
+  line-height: 1.5em;
+}
+
+.footer-nav li{
+  display: inline;
+  margin-right: 10px;
+  font-size: 24pt;
+}

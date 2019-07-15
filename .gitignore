@@ -79,8 +79,8 @@ typings/
 .DS_Store
 
 # proprietary files
-server/public/bg.jpg
-server/public/logo.png
-server/public/favicon.ico
-server/public/axis.woff*
+client/src/assets/*.woff
+client/src/assets/*.woff2
+client/src/assets/*.jpg
+client/src/assets/*.png
 secrets/
