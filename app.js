@@ -19,17 +19,8 @@ const localCors = function(req, res, next) {
 app.use(morgan("dev"));
 app.use(localCors);
 
-app.use("/public", express.static(__dirname + "/client/public"));
 app.use(bodyparser.json());
-app.set("view engine", "hbs");
 app.set("x-powered-by", false);
-
-app.get("/", (req, res) => {
-  res.render("index", {
-    description:
-      "Couvertown is a community of designers and creators who, through our work, seek to create beautiful things and weave a common thread through the social fabric of Vancouver."
-  });
-});
 
 app.get("/api/products", ProductsController.list);
 app.post("/api/products/create", ProductsController.create);
