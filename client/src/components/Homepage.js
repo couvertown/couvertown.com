@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
-import './assets/app.css';
+import '../assets/app.css';
 
 class Homepage extends Component {
   render() {

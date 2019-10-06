@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import BoxLogo from "./assets/logo-box.png";
+import BoxLogo from "../assets/logo-box.png";
 
 class Footer extends Component {
   render() {
