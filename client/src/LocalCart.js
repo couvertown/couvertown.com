@@ -27,11 +27,10 @@ export function getLocalCart() {
 }
 
 export function addToLocalCart(item, quantity) {
-  let maybeCart = getLocalCart();
-  if (!maybeCart) {
+  let cart = getLocalCart();
+  if (!cart) {
     return null;
   }
-  let cart = JSON.parse(maybeCart);
   if (cart.items[item]) {
     cart.items[item] += quantity;
   } else {
@@ -39,6 +38,19 @@ export function addToLocalCart(item, quantity) {
   }
   localStorage.setItem("couvertown-cart", JSON.stringify(cart));
   return cart;
+}
+
+export function getLocalCartCount(cart) {
+  if (!cart) {
+    return 0;
+  }
+  let count = 0;
+  Object.keys(cart.items).forEach((key) => {
+    if (cart.items.hasOwnProperty(key)) {
+      count += cart.items[key];
+    }
+  });
+  return count;
 }
 
 export function removeFromLocalCart(item) {
