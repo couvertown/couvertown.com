@@ -7,16 +7,16 @@ import Store from "./components/Store";
 class App extends Component {
   render() {
     return (
-        <Router>
-          <Switch>
-            <Route path="/store">
-              <Store />
-            </Route>
-            <Route path="/">
-              <Homepage />
-            </Route>
-          </Switch>
-        </Router>
+      <Router>
+        <Switch>
+          <Route path="/store">
+            <Store />
+          </Route>
+          <Route path="/">
+            <Homepage />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }

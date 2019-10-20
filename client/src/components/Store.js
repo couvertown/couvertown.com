@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import Product, { ProductDetail } from "./Product";
+import ProductTile, { ProductDetail } from "./Product";
+import {
+  getLocalCart,
+  addToLocalCart,
+  removeFromLocalCart
+} from "../LocalCart";
 import ProductList from "../store/ProductList";
 
 class Store extends Component {
@@ -13,27 +18,32 @@ class Store extends Component {
 
   componentDidMount() {
     let productList = new ProductList("/products");
-    productList.get(1, 0, (data) => {
-      this.setState({loaded: true});
-      this.setState({products: data});
+    productList.get(1000, 0, data => {
+      this.setState({ loaded: true });
+      this.setState({ products: data });
     });
-  }
 
+    getLocalCart();
+  }
 
   render() {
     let products = Object.values(this.state.products);
     if (!this.state.loaded) {
-      return (
-        <span>loading the store...</span>
-      );
+      return <span>loading the store...</span>;
     }
     if (!products.length > 0) {
-      return (
-        <span>no products</span>
-      );
+      return <span>no products</span>;
     }
-    let productComponents = products.map((product) => {
-      return <Product shortname={product.shortname} name={product.name} description={product.description} longDescription={product.longDescription} price={product.price} />;
+    let productComponents = products.map(product => {
+      return (
+        <ProductTile
+          shortname={product.shortname}
+          name={product.name}
+          description={product.description}
+          longDescription={product.longDescription}
+          price={product.price}
+        />
+      );
     });
 
     return (

@@ -1,17 +1,21 @@
 @font-face {
-  font-family: 'AXIS Extra Bold';
-  src: url('axis.woff2') format('woff2'),
-      url('axis.woff') format('woff');
+  font-family: "AXIS Extra Bold";
+  src: url("axis.woff2") format("woff2"), url("axis.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css");
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/brands.css");
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 800;
   font-family: "AXIS Extra Bold", sans-serif;
   text-transform: uppercase;
@@ -28,7 +32,6 @@ body {
   text-align: center;
 }
 
-
 @media screen and (max-width: 1500px) {
   .page-title h1 {
     font-size: 36pt;
@@ -42,7 +45,7 @@ body {
 }
 
 div.cover {
-  background: url('bg.jpg') no-repeat center center;
+  background: url("bg.jpg") no-repeat center center;
   background-size: cover;
   width: 100vw;
   height: 900px;
@@ -62,7 +65,7 @@ div.cover-content {
   color: #ffffff;
 }
 
-.cover h1{
+.cover h1 {
   font-size: 48pt;
   letter-spacing: 0.25em;
   margin: 0px;
@@ -90,7 +93,7 @@ a {
   text-decoration-style: dotted;
 }
 
-a:hover{
+a:hover {
   text-decoration-style: solid;
 }
 
@@ -140,7 +143,6 @@ div.header {
   top: 50%;
   transform: translateY(-50%);
 }
-
 
 .header-nav li {
   display: inline;

@@ -7,7 +7,7 @@ export default class ProductList {
 
   get(quantity, offset, cb) {
     let resultsRef = this.ref.orderByKey().limitToFirst(quantity);
-    resultsRef.on('value', (snapshot) => {
+    resultsRef.on("value", snapshot => {
       let val = snapshot.val();
       if (val == null) {
         return cb([]);
@@ -15,5 +15,4 @@ export default class ProductList {
       return cb(val);
     });
   }
-
 }
