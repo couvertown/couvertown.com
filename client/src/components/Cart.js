@@ -10,13 +10,13 @@ class Cart extends Component {
   }
 
   renderItemCounts(items) {
-    let blah = [];
+    let counts = [];
     Object.keys(items).forEach(key => {
       if (items.hasOwnProperty(key)) {
-        blah.push(this.itemCount(key, items[key]));
+        counts.push(this.itemCount(key, items[key]));
       }
     });
-    return blah;
+    return counts;
   }
 
   render() {
