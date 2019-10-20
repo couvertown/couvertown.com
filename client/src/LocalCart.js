@@ -4,6 +4,10 @@ export function genCartId() {
   return uuid();
 }
 
+function saveCart(cart) {
+  localStorage.setItem("couvertown-cart", JSON.stringify(cart));
+}
+
 export function getLocalCart() {
   if (!localStorage) {
     console.log("browser does not support local storage.");
@@ -22,7 +26,7 @@ export function getLocalCart() {
     items: {}
   };
   console.log("initialised cart with id " + cart.id);
-  localStorage.setItem("couvertown-cart", JSON.stringify(cart));
+  saveCart(cart);
   return cart;
 }
 
@@ -36,7 +40,7 @@ export function addToLocalCart(item, quantity) {
   } else {
     cart.items[item] = quantity;
   }
-  localStorage.setItem("couvertown-cart", JSON.stringify(cart));
+  saveCart(cart);
   return cart;
 }
 
@@ -57,6 +61,16 @@ export function removeFromLocalCart(item) {
   let cart = getLocalCart();
   if (cart && cart.items[item]) {
     delete cart.items[item];
-    localStorage.setItem("couvertown-cart", cart);
+    saveCart(cart);
   }
+  return cart;
+}
+
+export function clearLocalCart() {
+  let cart = getLocalCart();
+  if(cart) {
+    cart.items = {};
+    saveCart(cart);
+  }
+  return cart;
 }

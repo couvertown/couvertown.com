@@ -24,6 +24,7 @@ class Cart extends Component {
       <div className="cart">
         <span>cart ({this.props.numItems})</span>
         {this.renderItemCounts(this.props.cart.items)}
+        <button onClick={this.props.onClick}>clear</button>
       </div>
     );
   }

@@ -6,7 +6,8 @@ import {
   getLocalCart,
   addToLocalCart,
   removeFromLocalCart,
-  getLocalCartCount
+  getLocalCartCount,
+  clearLocalCart
 } from "../LocalCart";
 import ProductList from "../store/ProductList";
 
@@ -22,6 +23,11 @@ class Store extends Component {
 
   handleAddToCart(product) {
     let cart = addToLocalCart(product.shortname, 1);
+    this.setState({ cart: cart });
+  }
+
+  handleClearCart(product) {
+    let cart = clearLocalCart();
     this.setState({ cart: cart });
   }
 
@@ -68,6 +74,7 @@ class Store extends Component {
         <Cart
           cart={this.state.cart}
           numItems={getLocalCartCount(this.state.cart)}
+          onClick={this.handleClearCart.bind(this)}
         />
       </div>
     );
