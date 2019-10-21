@@ -1,0 +1,18 @@
+div.productTile {
+    /* TODO DELETE THIS */
+    background-color: #dedede;
+    display: inline-block;
+    text-align: center;
+    /* TODO responsive */
+    width: 300px;
+}
+
+.productTile .productName {
+    font-family: "Arial";
+    font-size: 14pt;
+}
+
+.productTile a.productName {
+    text-decoration: none;
+    color: #000000;
+}

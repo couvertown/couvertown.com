@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import { addToLocalCart } from "../LocalCart";
+import "./css/product.css";
 
 export default class ProductTile extends Component {
   render() {
     return (
       <div className="productTile" key={this.props.shortname}>
-        <h2>
-          <a href={this.props.shortname}>{this.props.name}</a>
-        </h2>
+        <a className="productName" href={this.props.shortname}>{this.props.name}</a>
         <p>{this.props.description}</p>
-        <p>
-          <small>CAD ${this.props.price}</small>
-        </p>
-        <button onClick={this.props.onClick}>add to cart</button>
+        <span className="productPrice">CAD ${this.props.price}</span>
+        <button className="cartButton" onClick={this.props.onClick}>add to cart</button>
       </div>
     );
   }
@@ -32,4 +29,11 @@ export class ProductDetail extends Component {
       </div>
     );
   }
+}
+
+function ProductList(props) {
+  return (
+      <div className="productList">
+      </div>
+  );
 }
